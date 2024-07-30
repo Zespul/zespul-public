@@ -43,7 +43,7 @@ export default function NavbarPage() {
                 </svg>
             </button>
 
-            <nav className={`md:space-x-12 text-sm font-medium text-gray-500 hover:[&>a]:text-black [&>a]:transition [&>a]:duration-150 ${isMenuOpen ? 'flex flex-col justify-start items-start' : 'hidden'} md:flex`}>
+            <nav className={`fixed pointer-events-none top-0 left-0 w-full h-full bg-black/80 text-white flex flex-col justify-center items-center space-y-6 ${isMenuOpen ? 'flex' : 'hidden'} md:relative md:space-x-12 md:space-y-0 md:bg-transparent md:text-gray-500 md:flex-row md:justify-end md:items-center`}>
                 <Link href="/" className={pathname === '/' ? 'text-black font-semibold' : ''}>Inicio</Link>
                 <Link href="/proyectos" className={pathname === '/proyectos' ? 'text-black font-semibold' : ''}>Proyectos</Link>
                 <Link href="/ranking" className={pathname === '/ranking' ? 'text-black font-semibold' : ''}>Ranking</Link>
