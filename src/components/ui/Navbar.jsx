@@ -6,12 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function NavbarPage() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const pathname = usePathname();
-
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
-    };
 
     return (
         <section className="flex justify-between items-center py-6">
@@ -23,27 +18,8 @@ export default function NavbarPage() {
                 height={100}
             />
 
-            <button
-                className="block md:hidden text-black"
-                onClick={toggleMenu}
-            >
-                <svg
-                    className="w-6 h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M4 6h16M4 12h16m-7 6h7"
-                    ></path>
-                </svg>
-            </button>
-
-            <nav className={`fixed pointer-events-none top-0 left-0 w-full h-full bg-black/80 text-white flex flex-col justify-center items-center space-y-6 ${isMenuOpen ? 'flex' : 'hidden'} md:relative md:space-x-12 md:space-y-0 md:bg-transparent md:text-gray-500 md:flex-row md:justify-end md:items-center`}>
+            
+<nav className="space-x-12 text-sm font-medium text-gray-500 hover:[&>a]:text-black [&>a]:transition [&>a]:duration-150">
                 <Link href="/" className={pathname === '/' ? 'text-black font-semibold' : ''}>Inicio</Link>
                 <Link href="/proyectos" className={pathname === '/proyectos' ? 'text-black font-semibold' : ''}>Proyectos</Link>
                 <Link href="/ranking" className={pathname === '/ranking' ? 'text-black font-semibold' : ''}>Ranking</Link>
