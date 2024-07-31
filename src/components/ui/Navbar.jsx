@@ -18,8 +18,8 @@ export default function NavbarPage() {
                 height={100}
             />
 
-            
-<nav className="space-x-12 text-sm font-medium text-gray-500 hover:[&>a]:text-black [&>a]:transition [&>a]:duration-150">
+
+            <nav className="space-x-12 text-sm font-medium text-gray-500 hover:[&>a]:text-black [&>a]:transition [&>a]:duration-150">
                 <Link href="/" className={pathname === '/' ? 'text-black font-semibold' : ''}>Inicio</Link>
                 <Link href="/proyectos" className={pathname === '/proyectos' ? 'text-black font-semibold' : ''}>Proyectos</Link>
                 <Link href="/ranking" className={pathname === '/ranking' ? 'text-black font-semibold' : ''}>Ranking</Link>
