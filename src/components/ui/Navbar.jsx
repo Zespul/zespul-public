@@ -22,12 +22,12 @@ export default function NavbarPage() {
                 />
             </Link>
 
-            <ul className="hidden lg:flex items-center gap-12 font-semibold text-sm">
-                <li className="p-3 cursor-pointer rounded-md hover:bg-sky-400">Inicio</li>
-                <li className="p-3 cursor-pointer rounded-md hover:bg-sky-400">Proyectos</li>
-                <li className="p-3 cursor-pointer rounded-md hover:bg-sky-400">Ranking</li>
-                <li className="p-3 cursor-pointer rounded-md hover:bg-sky-400">Blog</li>
-            </ul>
+            <nav className="hidden lg:block space-x-12 text-sm font-medium text-gray-500 hover:[&>a]:text-black [&>a]:transition [&>a]:duration-150">
+                <Link href="/" className={pathname === '/' ? 'text-black font-semibold under' : ''}>Inicio</Link>
+                <Link href="/proyectos" className={pathname === '/proyectos' ? 'text-black font-semibold under' : ''}>Proyectos</Link>
+                <Link href="/ranking" className={pathname === '/ranking' ? 'text-black font-semibold under' : ''}>Ranking</Link>
+                <Link href="/blog" className={pathname === '/blog' ? 'text-black font-semibold under' : ''}>Blog</Link>
+            </nav>
 
             <Link href="/login" className="bg-black text-white font-semibold px-6 py-2 rounded-md text-sm hidden lg:block">Log In</Link>
 
