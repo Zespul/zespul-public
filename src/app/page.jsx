@@ -1,5 +1,3 @@
-import Image from "next/image";
-import Navbar from "@/components/ui/Navbar";
 import Hero from "@/components/landing/Hero";
 import HowItWorks from "@/components/landing/HowItWorks";
 

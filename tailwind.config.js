@@ -15,5 +15,38 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        '.grid-template-areas-HowItWorks': {
+          'grid-template-areas': [
+            `"card1 arrow1 card2"`,
+            `". . arrow2"`,
+            `"card4 arrow3 card3"`,
+          ],
+        },
+        '.grid-area-card1': {
+          'grid-area': 'card1',
+        },
+        '.grid-area-card2': {
+          'grid-area': 'card2',
+        },
+        '.grid-area-card3': {
+          'grid-area': 'card3',
+        },
+        '.grid-area-card4': {
+          'grid-area': 'card4',
+        },
+        '.grid-area-arrow1': {
+          'grid-area': 'arrow1',
+        },
+        '.grid-area-arrow2': {
+          'grid-area': 'arrow2',
+        },
+        '.grid-area-arrow3': {
+          'grid-area': 'arrow3',
+        },
+      });
+    }
+  ],
 };

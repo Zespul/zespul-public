@@ -4,7 +4,7 @@ import Card from "@/components/ui/CardBenefit";
 
 export default function Hero() {
     return (
-        <>
+        <section style={{ height: 'calc(100vh - 96px)' }} className="flex flex-col justify-center">
             <article className="flex flex-col justify-center items-center lg:flex-row lg:justify-between lg:mt-8">
                 <article className="lg:w-1/2 space-y-4 md:space-y-6 lg:space-y-6">
                     <h1 className="text-3xl font-semibold text-center md:text-4xl md:w-2/3 md:mx-auto lg:text-left lg:w-full lg:mx-0 2xl:text-5xl 2xl:text-pretty">Encuentra el equipo que buscas, <span className="text-primary bg-secondary uppercase px-2">gratis</span></h1>
@@ -60,6 +60,6 @@ export default function Hero() {
                 />
 
             </div>
-        </>
+        </section>
     )
 }
