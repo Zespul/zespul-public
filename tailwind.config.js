@@ -18,34 +18,38 @@ module.exports = {
   plugins: [
     function ({ addUtilities }) {
       addUtilities({
-        '.grid-template-areas-HowItWorks': {
-          'grid-template-areas': [
-            `"card1 arrow1 card2"`,
-            `". . arrow2"`,
-            `"card4 arrow3 card3"`,
-          ],
+        '.parent': {
+          'display': 'grid',
+          'grid-template-columns': 'repeat(3, 1fr)',
+          'grid-template-rows': 'repeat(3, 1fr)',
+          'grid-column-gap': '0px',
+          'grid-row-gap': '0px',
+          'justify-items': 'center',
+          'align-items': 'center',
         },
-        '.grid-area-card1': {
-          'grid-area': 'card1',
+
+        '.div1': {
+          'grid-area': '1 / 1 / 2 / 2',
         },
-        '.grid-area-card2': {
-          'grid-area': 'card2',
+        '.div2': {
+          'grid-area': '1 / 2 / 2 / 3',
         },
-        '.grid-area-card3': {
-          'grid-area': 'card3',
+        '.div3': {
+          'grid-area': '1 / 3 / 2 / 4',
         },
-        '.grid-area-card4': {
-          'grid-area': 'card4',
+        '.div4': {
+          'grid-area': '2 / 3 / 3 / 4',
         },
-        '.grid-area-arrow1': {
-          'grid-area': 'arrow1',
+        '.div5': {
+          'grid-area': '3 / 3 / 4 / 4',
         },
-        '.grid-area-arrow2': {
-          'grid-area': 'arrow2',
+        '.div6': {
+          'grid-area': '3 / 2 / 4 / 3',
         },
-        '.grid-area-arrow3': {
-          'grid-area': 'arrow3',
+        '.div7': {
+          'grid-area': '3 / 1 / 4 / 2',
         },
+
       });
     }
   ],
