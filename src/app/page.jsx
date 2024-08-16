@@ -1,5 +1,6 @@
 import Hero from "@/components/landing/Hero";
 import HowItWorks from "@/components/landing/HowItWorks";
+import Newsletter from "@/components/landing/Newsletter";
 
 export default function Home() {
   return (
@@ -8,9 +9,8 @@ export default function Home() {
       <section className="w-[80%] mx-auto">
         <Hero />
         <HowItWorks />
-        <article>
-          
-        </article>
+        <Newsletter />
+        
 
       </section>
     </>
