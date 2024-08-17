@@ -6,7 +6,7 @@ import ButtonCTA from '../ui/ButtonCTA';
 
 export default function Newsletter() {
     return (
-        <article className='relative w-fit mx-auto flex flex-col justify-center items-center bg-secondary text-white rounded-xl px-32 py-14 gap-4 shadow-xl shadow-black'>
+        <article className='relative w-fit mx-auto flex flex-col justify-center items-center bg-secondary text-white rounded-xl mt-20 px-32 py-14 gap-4  shadow-black'>
             <div className='relative'>
                 <h3 className='uppercase font-bold text-lg'>¡Suscríbete a nuestra newsletter!</h3>
                 <Airplane className='size-10 absolute top-1/2 -translate-y-1/2 -right-20' />

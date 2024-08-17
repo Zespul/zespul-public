@@ -3,8 +3,12 @@ import React from 'react';
 
 export default function Footer() {
    return (
-      <div>
-         footer
-      </div>
+      <section>
+        <p>footer</p>
+        <p>footer</p>
+        <p>footer</p>
+        <p>footer</p>
+        <p>footer</p>
+      </section>
    )
 }
