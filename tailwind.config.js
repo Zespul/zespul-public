@@ -11,7 +11,8 @@ module.exports = {
         primary: "#16A085",
         secondary: "#2C3E50",
         terciary: "#ECF0F1",
-        grayText: "#494949"
+        grayText: "#494949",
+        footerbg: "#191919",
       },
     },
   },
