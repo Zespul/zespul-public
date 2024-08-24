@@ -11,8 +11,8 @@ export default function Hero() {
                     <p className="text-xs text-center md:text-sm md:w-2/3 md:mx-auto 2xl:text-sm md:text-pretty lg:text-left lg:w-full lg:mx-0">Busca equipo con el que propulsar tus ideas al éxito. Publica tus proyectos y encuentra los colaboradores ideales sin costes adicionales.</p>
 
                     <div className="text-xs 2xl:text-sm flex gap-6 justify-center items-center lg:justify-start">
-                        <Link href="/proyectos" className="bg-primary border-2 border-primary text-white font-bold px-4 py-3 rounded-md">Explorar proyectos</Link>
-                        <Link href="/proyectos" className="hidden md:block border-2 border-black primary text-black font-bold px-4 py-3 rounded-md">Sube tu idea de proyecto</Link>
+                        <Link href="/proyectos" className="bg-primary border-2 border-primary text-white font-bold px-4 py-3 rounded-md hover:text-primary hover:bg-white transition duration-200 hover:-translate-y-2">Explorar proyectos</Link>
+                        <Link href="/proyectos" className="hidden md:block border-2 border-black primary text-black font-bold px-4 py-3 rounded-md hover:bg-black hover:text-white transition duration-200 hover:-translate-y-2">Sube tu idea de proyecto</Link>
                     </div>
 
                     <div className="flex items-center gap-2">
