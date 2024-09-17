@@ -1,9 +1,9 @@
 import React from 'react';
 import Image from "next/image";
 import Link from "next/link";
-import Instagram from "../icons/instagram"
-import Tiktok from "../icons/tiktok"
-import Twitter from "../icons/twitter"
+import Instagram from "../icons/Instagram"
+import Tiktok from "../icons/Tiktok"
+import Twitter from "../icons/Twitter"
 
 
 export default function Footer() {

@@ -1,6 +1,6 @@
 import React from 'react';
-import Airplane from '../icons/airplane';
-import Arrow from '../icons/arrow';
+import Airplane from '../icons/Airplane';
+import Arrow from '../icons/Arrow';
 import ButtonCTA from '../ui/ButtonCTA';
 
 
