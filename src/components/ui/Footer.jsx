@@ -20,7 +20,7 @@ export default function Footer() {
                      height={100}
                   />
                </Link>
-               <h1 className='font-bold text-lg'>Innovmates</h1>
+               <h1 className='font-bold text-lg'>Zespul</h1>
                <p className='text-xs w-60'>Encuentra al equipo ideal con el que llevar tu idea al exito.</p>
             </div>
             <div className='flex items-center gap-20 text-sm'>
@@ -42,7 +42,7 @@ export default function Footer() {
          </div>
          <div className="bg-terciary w-full h-[1px] rounded-full"></div>
          <div className='flex justify-between items-center'>
-            <p className='text-xs '>© 2024 Innovmates - Todos los Derechos Reservados</p>
+            <p className='text-xs '>© 2024 Zespul - Todos los Derechos Reservados</p>
             <div className='flex gap-6 items-center'>
                <Link href="https://www.instagram.com/" target='_blank' rel='noreferrer'>
                   <Instagram className='size-4 hover:text-primary transition duration-150'></Instagram>
