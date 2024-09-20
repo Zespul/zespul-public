@@ -17,10 +17,10 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Push to Public Repo
-        env:
-          GITHUB_TOKEN: ${{ secrets.PUBLIC_REPO_PAT }}
+        with:
+          token: ${{ secrets.PUBLIC_REPO_PAT }}
         run: |
-          git config --global user.name "Zespul"
+          git config --global user.name "Zespu${{ secrets.PUBLIC_REPO_PAT }}l"
           git config --global user.email "innovmates@gmail.com"
           git remote add public https://github.com/Zespul/zespul-public.git
           git push public master --force
