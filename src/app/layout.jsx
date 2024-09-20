@@ -7,7 +7,7 @@ const font = Inter({ subsets: ["latin"] });
 
 const sharedTitle = "Zespul";
 const sharedDescription = "Encuentra equipo gratis para tus proyectos.";
-const sharedImage = "https://zespul.vercel.app/zespul.png";
+const sharedImage = "/public/zespul.png";
 
 export const metadata = {
   title: sharedTitle,
