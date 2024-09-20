@@ -7,8 +7,11 @@ export default function Hero() {
         <section style={{ height: 'calc(100vh - 96px)' }} className="flex flex-col justify-center">
             <article className="flex flex-col justify-center items-center lg:flex-row lg:justify-between lg:mt-8">
                 <article className="lg:w-1/2 space-y-4 md:space-y-6 lg:space-y-6">
-                    <h1 className="text-3xl font-semibold text-center md:text-4xl md:w-2/3 md:mx-auto lg:text-left lg:w-full lg:mx-0 2xl:text-5xl 2xl:text-pretty">Encuentra el equipo que buscas, <span className="text-primary bg-secondary uppercase px-2">gratis</span></h1>
-                    <p className="text-xs text-center md:text-sm md:w-2/3 md:mx-auto 2xl:text-sm md:text-pretty lg:text-left lg:w-full lg:mx-0">Busca equipo con el que propulsar tus ideas al éxito. Publica tus proyectos y encuentra los colaboradores ideales sin costes adicionales.</p>
+                    <h1 className="text-3xl font-semibold text-center md:text-4xl md:w-2/3 md:mx-auto lg:text-left lg:w-full lg:mx-0 2xl:text-5xl 2xl:text-pretty" style={{ lineHeight: '1.5' }}>
+                        Encuentra el equipo que <br /> buscas,
+                        <span className="relative text-white uppercase px-2 rotated-span ml-2 before:bg-primary">gratis</span>
+                    </h1>
+                    <p className="text-xs text-center md:text-sm md:w-2/3 md:mx-auto 2xl:text-sm md:text-pretty lg:text-left lg:w-full lg:mx-0 xl:w-4/5">Busca equipo con el que propulsar tus ideas al éxito. Publica tus proyectos y encuentra los colaboradores ideales sin costes adicionales.</p>
 
                     <div className="text-xs 2xl:text-sm flex gap-6 justify-center items-center lg:justify-start">
                         <Link href="/proyectos" className="bg-primary border-2 border-primary text-white font-bold px-4 py-3 rounded-md hover:text-primary hover:bg-white transition duration-200 hover:-translate-y-2">Explorar proyectos</Link>

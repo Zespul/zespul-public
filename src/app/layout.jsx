@@ -6,8 +6,8 @@ import Footer from "@/components/ui/Footer";
 const font = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Innovmate",
-  description: "Encuentra equipo gratis para tus proyectos",
+  title: "Zespul",
+  description: "Encuentra equipo gratis para tus proyectos.",
 };
 
 export default function RootLayout({ children }) {
