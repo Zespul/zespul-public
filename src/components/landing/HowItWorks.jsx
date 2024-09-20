@@ -3,8 +3,8 @@ import Arrow from '../ui/Arrow'
 
 export default function HowItWorkds() {
     return (
-        <div className='py-10'>
-            <h2 className='text-center text-3xl font-medium my-10'>COMO FUNCIONA</h2>
+        <div className=''>
+            <h2 className='text-center text-3xl font-medium mb-10'>COMO FUNCIONA</h2>
             <div className='w-2/3 mx-auto parent'>
                 <Card
                     className="div1"
