@@ -6,6 +6,9 @@ on:
       - master
 
 jobs:
+  job-name:
+    permissions:
+      contents: write
   sync:
     runs-on: ubuntu-latest
 
