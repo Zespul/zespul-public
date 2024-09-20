@@ -22,3 +22,5 @@ jobs:
         run: git merge upstream/master
       - name: Push to upstream
         run: git push upstream master
+        env:
+          GITHUB_TOKEN: ${{ secrets.PUBLIC_REPO_PAT }}
