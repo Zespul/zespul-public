@@ -18,9 +18,18 @@ export default function Newsletter() {
                 <h3 className='text-2xl font-bold'>Manténte actualizado</h3>
                 <p className='text-sm text-grayText mb-2'>Recibe actualizaciones exclusivas, noticias y nuevos proyectos directamente en tu bandeja de entrada.</p>
             </div>
-            <div className='flex flex-col gap-3'>
-                <input className='placeholder:text-[#7B7B7B] border border-black rounded-md py-2 px-4 text-sm outline-none focus:border-primary transition duration-100 text-grayText' type="email" placeholder='email@example.com' />
-                <button className='bg-black py-2 text-white font-semibold rounded-md'>Confirmar</button>
+            <div >
+                {submitted ? (
+                    <p className='font-bold text-primary'>¡Subscrito! Te mantendremos actualizado</p>
+                ) : (
+                    <form className='flex flex-col gap-3' action={async formData => {
+                        const response = await addSubscriber(formData);
+                        setSubmitted(true)
+                    }}>
+                        <input className='placeholder:text-[#7B7B7B] border border-black rounded-md py-2 px-4 text-sm outline-none focus:border-primary transition duration-100 text-grayText' type="email" name='email' placeholder='email@example.com' />
+                        <button className='bg-black py-2 text-white font-semibold rounded-md'>Confirmar</button>
+                    </form>
+                )}
             </div>
         </article>
     )
