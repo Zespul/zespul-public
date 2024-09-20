@@ -1,26 +1,17 @@
-name: Sync to Public Repository
+name: Sync to Public Repo
 
 on:
   push:
-    branches:
-      - master
+    branches: [ master ]
 
 jobs:
   sync:
     runs-on: ubuntu-latest
-    
-    permissions:
-      contents: write
-
     steps:
-      - name: Checkout Private Repo
-        uses: actions/checkout@v3
-
-      - name: Push to Public Repo
+      - uses: actions/checkout@v3
+      - name: Push to public repo
+        uses: Edgaras/git-push-action@v1
         with:
-          token: ${{ secrets.PUBLIC_REPO_PAT }}
-        run: |
-          git config --global user.name "Zespu${{ secrets.PUBLIC_REPO_PAT }}l"
-          git config --global user.email "innovmates@gmail.com"
-          git remote add public https://github.com/Zespul/zespul-public.git
-          git push public master --force
+          repository: 'Zespul/zespul-public'
+          branch: 'master'
+          token: ${{ secrets.GITHUB_TOKEN }}
