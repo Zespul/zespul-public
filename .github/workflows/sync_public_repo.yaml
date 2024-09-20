@@ -8,13 +8,17 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with: 
-          persist-credentials: false
-          fetch-depth: 0
-      - name: Push to public repo
-        uses: ad-m/github-push-action@master
+      - uses: actions/checkout@v3
         with:
-          repository: 'Zespul/zespul-public'
-          branch: 'master'
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+      - name: Configure git
+        run: |
+          git config --global user.email "your_email@example.com"
+          git config --global user.name "Your Name"
+          git remote add upstream https://github.com/Zespul/zespul-public.git
+      - name: Fetch from upstream
+        run: git fetch upstream
+      - name: Merge upstream/master into master
+        run: git merge upstream/master
+      - name: Push to upstream
+        run: git push upstream master
