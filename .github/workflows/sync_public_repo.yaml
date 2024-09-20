@@ -19,5 +19,5 @@ jobs:
         run: |
           git config --global user.name "Zespul"
           git config --global user.email "innovmates@gmail.com"
-          git remote add public https://Zespul:${{ secrets.PUBLIC_REPO_PAT }}@github.com/Zespul/zespul-public.git
+          git remote add public https://github.com/Zespul/zespul-public.git
           git push public master --force
