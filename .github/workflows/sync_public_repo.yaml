@@ -1,0 +1,23 @@
+name: Sync to Public Repo
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Private Repo
+        uses: actions/checkout@v3
+
+      - name: Push to Public Repo
+        env:
+          GITHUB_TOKEN: ${{ secrets.PUBLIC_REPO_PAT }}
+        run: |
+          git config --global user.name "Zespul"
+          git config --global user.email "innovmates@gmail.com"
+          git remote add public https://Zespul:${{ secrets.PUBLIC_REPO_PAT }}@github.com/Zespul/zespul-public.git
+          git push public master --force
