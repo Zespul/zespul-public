@@ -13,28 +13,15 @@ export default function Newsletter() {
     const [submitted, setSubmitted] = useState(false);
 
     return (
-        <article className='relative w-fit mx-auto flex flex-col justify-center items-center bg-secondary text-white rounded-xl mt-20 px-32 py-14 gap-4  shadow-black'>
-            <div className='relative'>
-                <h3 className='uppercase font-bold text-lg'>¡Suscríbete a nuestra newsletter!</h3>
-                <Airplane className='size-10 absolute top-1/2 -translate-y-1/2 -right-20' />
+        <article className='px-28 py-16 w-2/5 mx-auto border border-black rounded-md flex flex-col gap-4'>
+            <div>
+                <h3 className='text-2xl font-bold'>Manténte actualizado</h3>
+                <p className='text-sm text-grayText mb-2'>Recibe actualizaciones exclusivas, noticias y nuevos proyectos directamente en tu bandeja de entrada.</p>
             </div>
-            <p className='text-sm lg:w-3/4 lg:text-center font-light'>Recibe actualizaciones exclusivas, noticias y nuevos proyectos directamente en tu bandeja de entrada.</p>
-            <p className='text-sm font-light'>¡Suscríbete a nuestra newsletter!</p>
-            <div className='space-x-2 mt-8'>
-                {submitted ? (
-                    <p>¡Subscrito! Te mantendremos actualizado</p>
-                ) : (
-                    <form action={async formData => {
-                        const response = await addSubscriber(formData);
-                        setSubmitted(true)
-                    }}>
-                        <input type='email' name='email' placeholder='Tu correo electrónico' className='outline-none bg-transparent border-b placeholder:text-sm text-sm w-60 focus:border-primary transition duration-200' />
-                        <ButtonCTA cta='Suscribirme' type='submit' className="text-sm shadow-lg"/>
-                    </form>
-                )}
+            <div className='flex flex-col gap-3'>
+                <input className='placeholder:text-[#7B7B7B] border border-black rounded-md py-2 px-4 text-sm outline-none focus:border-primary transition duration-100 text-grayText' type="email" placeholder='email@example.com' />
+                <button className='bg-black py-2 text-white font-semibold rounded-md'>Confirmar</button>
             </div>
-
-            <Arrow className='h-52 -rotate-12 absolute top-1/2 -translate-y-1/2 left-6' />
         </article>
     )
 }   
