@@ -21,3 +21,16 @@
     text-wrap: balance;
   }
 }
+
+.rotated-span::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 110%;
+  height: 120%;
+  background-color: #3490dc; /* Color de fondo, cámbialo si es necesario */
+  transform: translate(-50%, -50%) rotate(-2.4deg);
+  z-index: -1; /* Asegúrate de que esté detrás del texto */
+  /* border-radius: 5px; */
+}
